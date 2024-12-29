@@ -1,0 +1,195 @@
+/* fonts */
+
+@font-face {
+    font-family: "Inter-Regular";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter-SemiBold";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("./assets/fonts/Inter-Bold.ttf") format("truetype");
+}
+
+/* variables */
+
+:root {
+    /* colors */
+    --color-grey-700: #333333;
+    --color-grey-800: #1f1f1f;
+    --color-grey-900: #141414;
+    --color-green: #c4f82a;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    /* spacings */
+    --spacing-50: 4px;
+    --spacing-100: 8 px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-500: 40px;
+    /* font-sizes */
+    --heading-font-size: 2.4rem;
+    --paragraph-font-size: 1.4rem;
+    /* fallback fonts */
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+        Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro,
+        serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    padding: 0 var(--spacing-300);
+    font-family: "Inter-Regular", var(--font-sans-serif), var(--font-serif);
+    color: var(--color-white);
+    background-color: var(--color-grey-900);
+
+    @media (min-width: 550px) {
+        padding: 0;
+    }
+}
+
+/* socila links profile */
+
+.social-link-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-300);
+    max-width: 456px;
+    padding: var(--spacing-300);
+    border-radius: 12px;
+    background: var(--color-grey-800);
+
+    @media (min-width: 550px) {
+        width: 456px;
+        padding: var(--spacing-500);
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 384px;
+    }
+}
+
+.social-link-profile__header {
+    text-align: center;
+}
+
+.social-link-profile__avatar-container {
+    overflow: hidden;
+}
+
+.social-link-profile__avatar {
+    width: 88px;
+    margin: 0 auto;
+    margin-bottom: var(--spacing-300);
+    border-radius: 50%;
+}
+
+.social-link-profile__heading {
+    font-family: "Inter-SemiBold", var(--font-sans-serif), var(--font-serif);
+    font-size: var(--heading-font-size);
+}
+
+.social-link-profile__subheading,
+.social-link-profile__text,
+.social-link-profile__link {
+    font-size: var(--paragraph-font-size);
+}
+
+.social-link-profile__subheading,
+.social-link-profile__link {
+    font-family: "Inter-Bold", var(--font-sans-serif), var(--font-serif);
+}
+
+.social-link-profile__subheading {
+    color: var(--color-green);
+}
+
+.social-link-profile__text,
+.social-link-profile__list-item {
+    text-align: center;
+}
+
+.social-link-profile__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    width: 100%;
+    list-style: none;
+}
+
+.social-link-profile__link {
+    display: inline-block;
+    width: 100%;
+    padding: var(--spacing-150);
+    border-radius: 8px;
+    color: var(--color-white);
+    text-decoration: none;
+    background: var(--color-grey-700);
+    transition: 0.4s ease-in-out;
+}
+
+.social-link-profile__link:hover,
+.social-link-profile__link:focus {
+    background: var(--color-green);
+    color: var(--color-grey-700);
+}
